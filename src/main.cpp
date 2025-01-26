@@ -253,7 +253,7 @@ void processIPFromFile(const string& filename, ofstream &outFile) {
 int main() {
     string filename = "iplist.txt";
     string outputFile = "result.txt";
-    ofstream outFile(outputFile);
+    ofstream outFile(outputFile, ios::trunc);
     if (!outFile) {
         cerr << "result.txt: Can't Open File!" << endl;
         return 1;
